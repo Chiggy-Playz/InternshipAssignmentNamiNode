@@ -1,0 +1,15 @@
+services:
+  server:
+    build:
+      context: .
+    environment:
+      NODE_ENV: production
+    container_name: "node_server"
+    networks:
+      - genesis_network
+    ports:
+      - 3000:3000
+
+networks:
+  genesis_network:
+    external: true
